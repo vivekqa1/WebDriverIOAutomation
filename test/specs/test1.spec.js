@@ -5,6 +5,5 @@ describe('Demo Test', function () {
         await browser.$('[name="q"]').setValue('webdriverIO')
         await browser.$('[name="btnK"]').click()
         await browser.pause(2000)
-
     })
 })
