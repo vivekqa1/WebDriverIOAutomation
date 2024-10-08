@@ -8,16 +8,20 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () {
+    get usernameTextBox () {
         return $('#username');
     }
 
-    get inputPassword () {
+    get passwordTextBox () {
         return $('#password');
     }
 
-    get btnSubmit () {
+    get submitButton () {
         return $('button[type="submit"]');
+    }
+
+    get loginMassage() {
+        return $('#flash');
     }
 
     /**
@@ -25,9 +29,12 @@ class LoginPage extends Page {
      * e.g. to login using username and password
      */
     async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
+        await this.usernameTextBox.setValue(username);
+        await this.passwordTextBox.setValue(password);
+        await this.submitButton.click();
+    }
+    async checkMassage(msg){
+        await expect(this.loginMassage).toHaveText(expect.stringContaining(msg));
     }
 
     /**
