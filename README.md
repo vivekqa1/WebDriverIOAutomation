@@ -58,7 +58,7 @@ Step 5 - Run commands
  
  allure open     // will start the server and open the report
 
-** Run WebdriverIO Tests from Jenkins**
+ **Run WebdriverIO Tests from Jenkins**
  
  Step 1 - Download, set up, and start Jenkins
  
