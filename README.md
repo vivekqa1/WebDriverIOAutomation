@@ -48,13 +48,30 @@ Step 1 - Run - npm install @wdio/allure-reporter --save-dev
 
 Step 2 - Add reporter config in wdio.conf.js
 
-Step 3 - Run test and check Allure Results folder is generated
+Step 3 - Run a test and check Allure Results folder is generated
 
 Step 4 - Install allure command line tool  npm install -g allure-commandline --save-dev
 
 Step 5 - Run commands
 
- allure generate allure-results // this will generate allure-report folder
+ allure generate allure-results //This will generate allure-report folder
  
- allure open     // will start server and open report
+ allure open     // will start the server and open the report
+
+** Run WebdriverIO Tests from Jenkins**
+ 
+ Step 1 - Download, set up, and start Jenkins
+ 
+ Step 2 - Add JUnit Reporter extension in WebdriverIO Project - npm install @wdio/junit-reporter --save-dev
+ 
+ Step 3 - Update configuration file to add junit reporter configuration
+ 
+ Step 4 - Open Jenkins and create a new job
+ 
+ Step 5 - In the Build section add a command to run webdriverio tests
+ 
+ Step 6 - In the Post Build Actions add an option to Publish JUnit test result report
+ 
+ Step 7 - Run the job and check the results
+
  
