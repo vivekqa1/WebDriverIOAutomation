@@ -6,10 +6,9 @@ jobs:
   steps:
   - uses: actions/checkout@v4
   - uses: actions/setup-node@v4
-  - uses: nanasess/setup-chromedriver@v2.2.2
-  - uses: actions/upload-artifact@v4
     with:
       node-version: 18
+  - uses: nanasess/setup-chromedriver@v2.2.2    
   - run: mkdir -p path/to/artifact
   - run: echo hello > path/to/artifact/world.txt
   - uses: actions/upload-artifact@v4
